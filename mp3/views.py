@@ -41,14 +41,10 @@ class Update_Song(APIView):
                 return Response(serobj.errors, status=status.HTTP_400_BAD_REQUEST)
         except(ObjectDoesNotExist, KeyError):
             return Response({'message':"Invalid song Id"}, status=404)
+
+class sell():
+    def __init__(self,name):
+        self.name = name
         
         
-class deleteSong(APIView):
-    @staticmethod
-    def post(request):
-        try:
-            products = Song.objects.get(id=request.data['s_id'])
-            products.delete()
-            return Response({"message":"song delete successfully"},status=200)
-        except(ObjectDoesNotExist, KeyError):
-            return Response({'message':"Invalid song Id"}, status=404)
+        
