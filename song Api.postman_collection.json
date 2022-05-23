@@ -1,0 +1,130 @@
+{
+	"info": {
+		"_postman_id": "2eccfe6f-5ac8-4080-ad07-ac1f175908a8",
+		"name": "song Api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://127.0.0.1:8000/Songs/createSong/?songname=hello&duration=6&file",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "songname",
+							"value": "hello",
+							"type": "text"
+						},
+						{
+							"key": "duration",
+							"value": "6",
+							"type": "text"
+						},
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/home/ghanshyam/Downloads/Khudaya Re Mere Desh Ki Dharti 128 Kbps.mp3"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/Songs/createSong/?songname=hello&duration=6&file",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"Songs",
+						"createSong",
+						""
+					],
+					"query": [
+						{
+							"key": "songname",
+							"value": "hello"
+						},
+						{
+							"key": "duration",
+							"value": "6"
+						},
+						{
+							"key": "file",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/Songs/updateSong/",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "s_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "songname",
+							"value": "dilser",
+							"type": "text"
+						},
+						{
+							"key": "duration",
+							"value": "6",
+							"type": "text"
+						},
+						{
+							"key": "file",
+							"type": "file",
+							"src": [],
+							"disabled": true
+						}
+					]
+				},
+				"url": "http://127.0.0.1:8000/Songs/updateSong/"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/Songs/deleteSong/",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "s_id",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://127.0.0.1:8000/Songs/deleteSong/"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/Songs/getSongList/",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": "http://127.0.0.1:8000/Songs/getSongList/"
+			},
+			"response": []
+		}
+	]
+}
